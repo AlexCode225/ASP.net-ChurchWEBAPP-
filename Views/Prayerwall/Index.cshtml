@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Stock_system.Models.Prayerwall>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Wall of Prayer requests</h1>
+
+<p>
+    <a asp-action="Create"> Add prayer request</a>
+</p>
+<table class="table" style="background-color: #f9f9f9">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrayerTopic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrayerDetails)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ScriptureRefs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DayRequested)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrayerTopic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrayerDetails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScriptureRefs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DayRequested)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PrayerId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PrayerId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PrayerId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

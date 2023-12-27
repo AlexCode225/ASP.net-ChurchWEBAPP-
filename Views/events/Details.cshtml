@@ -1,0 +1,36 @@
+﻿@model Stock_system.Models.events
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Event Details</h1>
+
+<div>
+    <h4>events</h4>
+    <hr />
+    <dl class="row" style="background-color: #f9f9f9 ">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.eventName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.eventName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.eventTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.eventTime)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.eventID">Edit</a> |
+    <a asp-action="Index">Back </a>
+</div>

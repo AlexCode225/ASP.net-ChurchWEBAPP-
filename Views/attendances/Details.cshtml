@@ -1,0 +1,36 @@
+﻿@model Stock_system.Models.attendance
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Attendance details</h1>
+
+<div>
+ 
+    <hr />
+    <dl class="row" style="background-color: #f9f9f9 ">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.children)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.children)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.date)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.AttendanceId">Edit</a> |
+    <a asp-action="Index">Back</a>
+</div>

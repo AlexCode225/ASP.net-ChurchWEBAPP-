@@ -1,0 +1,60 @@
+html {
+  font-size: 23px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 20px;
+    
+  }
+}
+
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-image: url("/Images2/hero-bg.jpg");
+    background-size: cover;
+   // background-repeat: no-repeat;
+    color: cadetblue;
+}
+
+
+
+.newsletter-form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    .newsletter-form input {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+.newsletter-button {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+    .newsletter-button:hover {
+        background-color: cadetblue;
+    }
+
+
+
+

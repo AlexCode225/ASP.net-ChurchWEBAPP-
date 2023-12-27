@@ -1,0 +1,42 @@
+﻿
+@using Microsoft.AspNetCore.Identity
+
+@model IdentityRole
+
+
+<form method="post" asp-action="Create" style="background-color: #f9f9f9"> 
+
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary"> Create Role </h2>
+            <hr />
+        </div>
+
+       
+        <div asp-valiadation-summary="ModelOnly" class=" text-danger"</div>
+            <div class="form-floating" >
+
+          
+
+            <input asp-for="Name" class="form-control" aria-required ="true"/>
+           <label asp-for="Name"> </label> 
+           <span asp-validation-for="Name" class="text-danger"></span>
+
+            </div>
+
+        <button type="submit" class="btn btn-primary" style="width:150px"> Save role </button>
+
+        
+    </div>
+</form>
+
+<div>
+   
+    <a asp-action="Index">Back</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

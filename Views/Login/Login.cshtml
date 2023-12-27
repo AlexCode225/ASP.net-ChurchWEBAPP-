@@ -1,0 +1,64 @@
+﻿@model Stock_system.Models.AuthUser
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<title> Stock_system </title>
+<h1>Login</h1>
+
+<h4> AuthUser </h4>
+<head>
+
+    <!-- Reference the CSS file -->
+    <link rel="stylesheet" href="~/css/file.css" />
+
+</head>
+<hr />
+<div class="row">
+    <div class="col-md-4  pull-center" >
+        <form asp-action="LoginView">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back</a>
+</div>
+
+
+<hr />
+
+
+
+
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2023 - Church system  - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
+</footer>
+
+
+<div>
+    <a asp-action="Index">Back </a>
+</div>
+

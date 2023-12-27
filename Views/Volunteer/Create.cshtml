@@ -1,0 +1,75 @@
+﻿@model Stock_system.Models.Volunteer
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Volunteer</h4>
+<hr />
+<div class="row" style="background-color: #f9f9f9; ">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="VolunteerName" class="control-label"></label>
+                <input asp-for="VolunteerName" class="form-control" />
+                <span asp-validation-for="VolunteerName" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="VolunteerSurname" class="control-label"></label>
+                <input asp-for="VolunteerSurname" class="form-control" />
+                <span asp-validation-for="VolunteerSurname" class="text-danger"></span>
+            </div>
+
+
+
+
+         
+
+
+            <div class="form-group">
+                <label asp-for="TaskDescription" class="control-label">Task Description</label>
+                <select asp-for="TaskDescription" class="form-control">
+                    <option value=" Select available Task">     >> <strong>Select available Task </strong>   </option>
+
+                    <option value="Usher/Greeter">Usher/Greeter</option>
+                    <option value="Children's Ministry">Children's Ministry</option>
+                    <option value="Music/Worship Team">Music/Worship Team</option>
+                    <option value="Hospitality Team">Hospitality Team</option>
+                    <option value="Prayer Team">Prayer Team</option>
+                    <option value="Tech and Media">Tech and Media </option>
+                    <option value="Outreach">Outreach</option>
+                    <option value="Administrative Support">Administrative Support</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Intercession">Intercession </option>
+                    <option value="First Aid Team">First Aid Team</option>
+                    <option value="Photography/Videography">Photography/Videography</option>
+                
+
+                </select>
+                <span asp-validation-for="TaskDescription" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+
+
+
+        </form>
+
+
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

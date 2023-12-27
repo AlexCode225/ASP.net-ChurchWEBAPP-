@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Stock_system.Models.Volunteer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Volunteer</h1>
+
+<p>
+    <a asp-action="Create">Sign up </a>
+</p>
+<table class="table" style="background-color: #f9f9f9">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VolunteerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VolunteerSurname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaskDescription)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VolunteerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VolunteerSurname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaskDescription)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VolunteerId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.VolunteerId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.VolunteerId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

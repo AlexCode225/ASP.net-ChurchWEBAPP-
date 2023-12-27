@@ -1,0 +1,74 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<IdentityRole>
+@{
+    ViewData["Title"] = "System Roles";
+}
+
+
+
+<div class= "container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-bg-light"> Administration </h2>
+        </div>
+        <div class="col-6">
+            <a asp-controller="SystemRoles" asp-action="Create" class="btn btn-primary"> 
+               <i class="bi bi-plus-circle"></i> &nbsp; Add role
+            </a>
+        </div>
+
+
+
+    </div>
+
+
+    <br />
+
+</div>
+
+<table class="table table-bordered table-striped" style="width:100% ; background-color: #f9f9f9"     >
+
+    <thead>
+        <tr>
+
+          <th>
+           Id 
+
+            </th>
+
+            <th>
+           Role
+
+            </th>
+
+          
+        </tr>
+        
+
+
+
+    </thead>
+
+
+
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+             <td> @Html.DisplayFor(modelItem=>item.Id)</td>
+             <td> @Html.DisplayFor(modelItem=>item.Name) </td>
+           </tr>
+              
+             
+              
+            
+        }
+    </tbody>
+
+
+
+
+</table>
+

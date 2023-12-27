@@ -1,0 +1,306 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section id="headp">
+    <div class="text-center">
+        <h1 class="display-6"> <strong> Church management system </strong></h1>
+        <h2><strong>Lonehill Village Church</strong></h2>
+        <p>
+            A <strong>Jesus</strong>-centered Church Family in Lonehill, Johannesburg, South Africa<br>
+            We're a Holy Spirit anointed church family in relationship with God
+            and each other, passionately reaching out into the community,<br>
+            nation and world, to make and equip disciples of the Lord Jesus.
+        </p>
+    </div>
+    <div class="card-container">
+        <div class="moving-card">
+            <img src="/Images2/crossimg1.jpg" alt="1">
+        </div>
+        <div class="moving-card">
+            <img src="/Images2/ngointeraction.jpg" alt="2">
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<div class="text-center mt-5">
+    <h2>Contact us </h2>
+    <ul>
+        <li><strong> Contact details: </strong> 011 465 1873. Emergency contact: 082 425 1980.</li>
+        <li><strong>Emergency Contact </strong> 082 425 1980.</li>
+        <li>  <a href="mailto:office@villagechurch.co.za">office@villagechurch.co.za</a>  </li>
+        <li> <strong> Facebook:</strong> facebook.com/lonehillvillagechurch</li>
+        <li> <strong> Physical address: </strong>  23 Crestwood Drive, Lonehills</li>
+       
+    </ul>
+</div>
+
+<section id="donation">
+    <div class="text-center mt-5">
+        <h2>Donate </h2>
+        <ul class="donation-details">
+            <li>
+                <strong>Banking details:</strong>
+            </li>
+            <li><strong>Name:</strong> Lonehill Village Church</li>
+            <li><strong>Bank:</strong> First National Bank</li>
+            <li><strong>Branch:</strong> 251655</li>
+            <li><strong>Account Number:</strong> 513 256 418 97</li>
+        </ul>
+
+        <button id="copyButton" class="copy-button">Copy</button>
+    </div>
+</section>
+
+<style>  
+
+    /* Styling for the header section */
+    /* Styling for the moving cards */
+    /* Styling for the section and background image */
+    #headp {
+        background-image: url("/wwwroot/images/sermon-3.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .text-center {
+        color: cadetblue; /* Adjust text color to be visible on the background image */
+    }
+
+    /* Styling for the moving cards */
+    .card-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .moving-card {
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+        border-radius: 5px;
+        margin: 0 10px;
+        position: relative;
+    }
+
+        .moving-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styling for the donation section */
+#donation {
+  background-color: black;
+  padding: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Styling for the donation details */
+.donation-details {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.donation-details li {
+  margin-bottom: 10px;
+}
+
+.donation-details strong {
+  font-weight: bold;
+}
+
+
+    /* Styling for the copy button */
+    .copy-button {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+        .copy-button:hover {
+            background-color: cadetblue;
+        }
+
+
+</style>
+
+<script>
+
+
+    // Function to copy donation details to the clipboard
+    function copyDonationDetails() {
+        var donationDetails = document.getElementsByClassName("donation-details")[0].innerText;
+
+        // Create a temporary textarea element
+        var textarea = document.createElement("textarea");
+        textarea.value = donationDetails;
+        document.body.appendChild(textarea);
+
+        // Select and copy the text from the textarea
+        textarea.select();
+        document.execCommand("copy");
+
+        // Remove the temporary textarea
+        document.body.removeChild(textarea);
+
+        // Update the button text briefly to indicate successful copying
+        var copyButton = document.getElementById("copyButton");
+        copyButton.textContent = "details copied successfully!";
+        setTimeout(function () {
+            copyButton.textContent = "Copy";
+        }, 2000);
+    }
+
+    // Event listener for click event on copy button
+    var copyButton = document.getElementById("copyButton");
+    copyButton.addEventListener("click", copyDonationDetails);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<head>
+    <style>
+        .card-img-top {
+            object-fit: cover;
+            height: 200px;
+        }
+    </style>
+
+</head>
+
+
+
+
+
+<body>
+    <div class="container">
+        <h2> Devotionals </h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/images2/dev1.jpg" class="card-img-top" alt="Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">The Treasure of Faith</h5>
+                        <p class="card-text">Spiritual legacies begin with God’s faithful ones—will others learn of Christ through you?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/images2/devo2.jpg" class="card-img-top" alt="Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title"> <strong> Reflecting God’s Love</strong></h5>
+                        <p class="card-text">
+                            John 13:34-35.
+
+                            Sometimes when the night skies are clear, a full moon illuminates the landscape,
+                            making everything clearly visible. However bright the scene may be, the moon doesn’t emit light but simply reflects it
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/images2/devo9.jpg" class="card-img-top" alt="Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">The Importance of Right Motives</h5>
+                        <p class="card-text">No obstacle can discourage us when we consider the unmatched power of our Lord.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/images2/devo3.jpg" class="card-img-top" alt="Image 4">
+                    <div class="card-body">
+                        <h5 class="card-title">While All Is Silence </h5>
+                        <p class="card-text">(Matthew 27:33-54). Now, in place of all that, is silence. Those who witnessed these events must have
+                            felt hopeless. Jesus, the One whom they loved and who had loved them so well in return, was in a tomb. .</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/images2/devo10.jpg" class="card-img-top" alt="Image 5">
+                    <div class="card-body">
+                        <h5 class="card-title">The Blessing of Sacrifice</h5>
+                        <p class="card-text">Though it may be difficult, we are called to follow Jesus' example and surrender everything to God.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/images2/devo7.jpg" class="card-img-top" alt="Image 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Two Types of Listeners</h5>
+                        <p class="card-text">Acts 17:10-12:  The brethren immediately sent Paul and Silas away by night to Berea, and when they
+                            arrived, they went into the synagogue of the Jews.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--newsletter form-->
+
+    <h2> Subscribe to our Newsletter </h2>
+
+    </div>
+    <form class="newsletter-form" action="https://formsubmit.co/nicenamehin@gmail.com" method="POST">
+        <input type="text" id="name" name="name" placeholder="Name" required>
+        <input type="email" id="email" name="email" placeholder="Email Address" required>
+
+        <button type="submit" class="newsletter-button">Subscribe</button>
+    </form>
+
+
+
+       
+
+    </div>
+
+
+</body>
+
